@@ -239,7 +239,7 @@ jobs:
       - install_awscli
       - install_ansible
       - add_ssh_keys:
-          fingerprints: ["27:3f:bb:6f:4b:56:c7:18:a3:72:ec:1f:b5:7c:ac:22"]
+          fingerprints: ["f2:72:3e:5b:f5:68:01:4f:e7:83:bb:0b:d6:e0:09:e2"]
       - attach_workspace:
           at: ~/
       # - run:
@@ -298,7 +298,7 @@ jobs:
           keys: [frontend-build]
       # - add_ssh_keys:
       #     fingerprints:
-      #       - "27:3f:bb:6f:4b:56:c7:18:a3:72:ec:1f:b5:7c:ac:22"
+      #       - "f2:72:3e:5b:f5:68:01:4f:e7:83:bb:0b:d6:e0:09:e2"
       # - attach_workspace:
       #     at: ~/
       - run:
@@ -339,7 +339,7 @@ jobs:
       - install_ansible
       - install_nodejs
       - add_ssh_keys:
-          fingerprints: ["27:3f:bb:6f:4b:56:c7:18:a3:72:ec:1f:b5:7c:ac:22"]
+          fingerprints: ["f2:72:3e:5b:f5:68:01:4f:e7:83:bb:0b:d6:e0:09:e2"]
       - attach_workspace:
           at: ~/
       - restore_cache:
@@ -426,7 +426,7 @@ jobs:
                     list-exports --query "Exports[?Name==\`WorkflowID\`].Value" \
                     --no-paginate --output text)
             echo "Old Wokflow ID: $OLD_WORKFLOW_ID"
-            curl https://kvdb.io/GEn2WMoitQETDzL1jxzn3d/old_workflow_id -d "${OLD_WORKFLOW_ID}"
+            curl https://kvdb.io/CShwmbsJYq2kmd885vi16d/old_workflow_id -d "${OLD_WORKFLOW_ID}"
       - run:
           name: Update cloudfront distribution
           command: |
@@ -454,7 +454,7 @@ jobs:
                 --stack-status-filter CREATE_COMPLETE --no-paginate --output text))
             echo Stack names: "${STACKS[@]}"
 
-            export OldWorkflowID=$(curl --insecure https://kvdb.io/GEn2WMoitQETDzL1jxzn3d/old_workflow_id)
+            export OldWorkflowID=$(curl --insecure https://kvdb.io/CShwmbsJYq2kmd885vi16d/old_workflow_id)
             echo Old Workflow ID: $OldWorkflowID
 
             if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
