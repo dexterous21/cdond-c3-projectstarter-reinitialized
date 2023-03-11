@@ -1,5 +1,5 @@
 url01
-https://github.com/tunde-ade/cdond-c3-projects
+https://github.com/dexterous21/cdond-c3-projectstarter-reinitialized
 
 url02
-http://udapeople-09809b3.s3-website-us-east-1.amazonaws.com
+http://udapeople-cc74ff6.s3-website-us-east-1.amazonaws.com/#/employees
